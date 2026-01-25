@@ -18,42 +18,6 @@
       color: var(--nero);
       background: var(--grigio);
     }
-    <style>
-  /* ... tutto il tuo CSS già esistente ... */
-
-  .hero-photo {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid var(--petrolio);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    margin: 20px 0;
-    display: block;
-    animation: fadeIn 1.2s ease-out forwards;
-    opacity: 0;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @media (max-width: 600px) {
-    .hero-photo {
-      width: 140px;
-      height: 140px;
-      margin: 16px auto;
-    }
-    .hero h2 {
-      font-size: 28px;
-    }
-    .hero p {
-      font-size: 16px;
-    }
-  }
-</style>
-
     header{
       background: var(--petrolio);
       color: var(--bianco);
@@ -137,6 +101,40 @@
         margin-top: 10px;
       }
     }
+    .hero-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--petrolio);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  margin: 20px 0;
+  display: block;
+  animation: fadeIn 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+/* Effetto fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive migliorato */
+@media (max-width: 600px) {
+  .hero-photo {
+    width: 140px;
+    height: 140px;
+    margin: 16px auto;
+  }
+  .hero h2 {
+    font-size: 28px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -151,18 +149,7 @@
   </nav>
 </header>
 
-<section class="hero" id="home">
-  <h2>Benvenuti nel mio studio</h2>
-
-  <img 
-    src="/attachments/fXDU6ckBRJ4Ak887A7TYL.jpeg" 
-    alt="Dott.ssa Mara De Rose - Biologa Nutrizionista" 
-    class="hero-photo fade-in">
-
-  <p>Mi chiamo Mara De Rose, biologa nutrizionista. Ti aiuto a raggiungere il tuo benessere con un percorso personalizzato, sia in studio che online.</p>
-  <a class="btn" href="#prenota">Prenota una visita</a>
-</section>
-
+<section class="hero" id="home"> <h2>Benvenuti nel mio studio</h2> <img src="./attachments/logo.jpeg" alt="Dott.ssa Mara De Rose - Biologa Nutrizionista" class="hero-photo fade-in"> <p>Mi chiamo Mara De Rose, biologa nutrizionista. Ti aiuto a raggiungere il tuo benessere con un percorso personalizzato, sia in studio che online.</p> <a class="btn" href="#prenota">Prenota una visita</a> </section>
 
 <section class="container" id="servizi">
   <h2>Servizi</h2>
