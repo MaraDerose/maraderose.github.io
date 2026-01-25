@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mara De Rose Biologa - Nutrizionista</title>
+
   <style>
     :root{
       --petrolio: #0b6b6b;
@@ -11,47 +12,66 @@
       --grigio: #f5f5f5;
       --nero: #333333;
     }
+
     *{box-sizing:border-box;}
+
     body{
       margin:0;
       font-family: Arial, sans-serif;
       color: var(--nero);
       background: var(--grigio);
     }
+
     header{
       background: var(--petrolio);
       color: var(--bianco);
-      padding: 20px 40px;
+      padding: 10px 30px;
       display:flex;
       justify-content: space-between;
       align-items:center;
     }
+
     header h1{
       margin:0;
       font-size: 24px;
     }
+
     nav a{
       color: var(--bianco);
       margin-left: 20px;
       text-decoration:none;
       font-weight: bold;
     }
+
+    /* ---------------- HERO A DUE COLONNE ---------------- */
+
     .hero{
-      background: linear-gradient(120deg, rgba(11,107,107,0.9), rgba(11,107,107,0.6)), url('https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1600&q=80');
+      background: linear-gradient(120deg, rgba(11,107,107,0.9), rgba(11,107,107,0.6)),
+                  url('https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1600&q=80');
       background-size: cover;
       color: white;
-      padding: 80px 40px;
-      text-align: left;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
     }
+
+    .hero-content{
+      max-width: 600px;
+    }
+
     .hero h2{
       font-size: 40px;
-      margin: 0 0 20px 0;
+      margin: 0 0 10px 0;
     }
+
     .hero p{
-      font-size: 18px;
-      max-width: 600px;
-      margin: 0 0 30px 0;
+      font-size: 22px;
+      line-height: 1.5;
+      margin: 0 0 25px 0;
     }
+
     .btn{
       background: var(--bianco);
       color: var(--petrolio);
@@ -62,25 +82,44 @@
       font-weight:bold;
       text-decoration:none;
     }
+
+    /* ---------------- FOTO OVALE ---------------- */
+
+    .hero-photo{
+      width: 200px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 50% / 60%;
+      border: 3px solid var(--petrolio);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      display: block;
+    }
+
+    /* ---------------- SEZIONI ---------------- */
+
     .container{
       padding: 40px;
       max-width: 1100px;
       margin: auto;
     }
+
     .grid{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
+
     .card{
       background: white;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+
     .card h3{
       margin-top:0;
     }
+
     footer{
       background: #222;
       color:white;
@@ -88,11 +127,9 @@
       padding: 20px;
     }
 
-    /* Responsive */
+    /* ---------------- RESPONSIVE ---------------- */
+
     @media (max-width: 900px){
-      .grid{
-        grid-template-columns: 1fr;
-      }
       header{
         flex-direction: column;
         align-items: flex-start;
@@ -100,43 +137,37 @@
       nav{
         margin-top: 10px;
       }
+      .grid{
+        grid-template-columns: 1fr;
+      }
     }
-    .hero-photo {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--petrolio);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  margin: 20px 0;
-  display: block;
-  animation: fadeIn 1.2s ease-out forwards;
-  opacity: 0;
-}
 
-/* Effetto fade-in */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    @media (max-width: 600px){
 
-/* Responsive migliorato */
-@media (max-width: 600px) {
-  .hero-photo {
-    width: 140px;
-    height: 140px;
-    margin: 16px auto;
-  }
-  .hero h2 {
-    font-size: 28px;
-  }
-  .hero p {
-    font-size: 16px;
-  }
-}
+      .hero{
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .hero-photo{
+        width: 130px;
+        height: 170px;
+        margin: 10px auto;
+      }
+
+      .hero h2{
+        font-size: 28px;
+      }
+
+      .hero p{
+        font-size: 18px;
+      }
+    }
 
   </style>
 </head>
+
 <body>
 
 <header>
@@ -149,7 +180,23 @@
   </nav>
 </header>
 
-<section class="hero" id="home"> <h2>Benvenuti nel mio studio</h2> <img src="./attachments/logo.jpeg" alt="Dott.ssa Mara De Rose - Biologa Nutrizionista" class="hero-photo fade-in"> <p>Mi chiamo Mara De Rose, biologa nutrizionista. Ti aiuto a raggiungere il tuo benessere con un percorso personalizzato, sia in studio che online.</p> <a class="btn" href="#prenota">Prenota una visita</a> </section>
+<!-- ---------------- HERO COMPLETA ---------------- -->
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+    <h2>Benvenuti nel mio studio</h2>
+    <p>Mi chiamo Mara De Rose, biologa nutrizionista. Ti aiuto a raggiungere il tuo benessere con un percorso personalizzato, sia in studio che online.</p>
+    <a class="btn" href="#prenota">Prenota una visita</a>
+  </div>
+
+  <img src="attachments/logo.jpeg"
+       alt="Dott.ssa Mara De Rose - Biologa Nutrizionista"
+       class="hero-photo">
+
+</section>
+
+<!-- ---------------- SERVIZI ---------------- -->
 
 <section class="container" id="servizi">
   <h2>Servizi</h2>
@@ -169,15 +216,17 @@
   </div>
 </section>
 
+<!-- ---------------- PRENOTA ---------------- -->
+
 <section class="container" id="prenota">
   <h2>Prenota una visita</h2>
   <p>Seleziona il tipo di visita e scegli una data direttamente nel calendario.</p>
 
-  <!-- Calendly Widget BEGIN -->
   <div class="calendly-inline-widget" data-url="https://calendly.com/tuo-link-calendly" style="min-width:320px;height:630px;"></div>
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  <!-- Calendly Widget END -->
 </section>
+
+<!-- ---------------- CONTATTI ---------------- -->
 
 <section class="container" id="contatti">
   <h2>Contatti</h2>
