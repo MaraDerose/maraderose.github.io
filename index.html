@@ -14,14 +14,28 @@
       --nero: #333333;
     }
 
-    *{box-sizing:border-box;}
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+    }
 
     body{
-      margin:0;
       font-family: 'Inter', sans-serif;
       color: var(--nero);
       background: var(--grigio);
       line-height: 1.6;
+    }
+
+    img{
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
 
     /* ---------------- HEADER ---------------- */
@@ -37,8 +51,8 @@
     }
 
     header h1{
-      margin:0;
       font-size: 22px;
+      margin:0;
     }
 
     nav{
@@ -68,6 +82,8 @@
       justify-content: space-between;
       gap: 40px;
       flex-wrap: wrap;
+      max-width: 100%;
+      overflow: hidden;
     }
 
     .hero-content{
@@ -77,12 +93,12 @@
 
     .hero h2{
       font-size: 40px;
-      margin: 0 0 10px 0;
+      margin-bottom: 10px;
     }
 
     .hero p{
       font-size: 20px;
-      margin: 0 0 25px 0;
+      margin-bottom: 25px;
     }
 
     .btn{
@@ -105,6 +121,7 @@
       border-radius: 50% / 60%;
       border: 3px solid var(--bianco);
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
     }
 
     /* ---------------- SEZIONI ---------------- */
