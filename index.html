@@ -1,3 +1,164 @@
-<html>
-  <h1>TEST</h1>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biologa Nutrizionista Mara De Rose</title>
+  <style>
+    :root{
+      --petrolio: #0b6b6b;
+      --bianco: #ffffff;
+      --grigio: #f5f5f5;
+      --nero: #333333;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      color: var(--nero);
+      background: var(--grigio);
+    }
+    header{
+      background: var(--petrolio);
+      color: var(--bianco);
+      padding: 20px 40px;
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+    }
+    header h1{
+      margin:0;
+      font-size: 24px;
+    }
+    nav a{
+      color: var(--bianco);
+      margin-left: 20px;
+      text-decoration:none;
+      font-weight: bold;
+    }
+    .hero{
+      background: linear-gradient(120deg, rgba(11,107,107,0.9), rgba(11,107,107,0.6)), url('https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      color: white;
+      padding: 80px 40px;
+      text-align: left;
+    }
+    .hero h2{
+      font-size: 40px;
+      margin: 0 0 20px 0;
+    }
+    .hero p{
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 0 30px 0;
+    }
+    .btn{
+      background: var(--bianco);
+      color: var(--petrolio);
+      padding: 12px 20px;
+      border:none;
+      border-radius: 8px;
+      cursor:pointer;
+      font-weight:bold;
+      text-decoration:none;
+    }
+    .container{
+      padding: 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .card{
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .card h3{
+      margin-top:0;
+    }
+    footer{
+      background: #222;
+      color:white;
+      text-align:center;
+      padding: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .grid{
+        grid-template-columns: 1fr;
+      }
+      header{
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav{
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Biologa Nutrizionista Mara De Rose</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#servizi">Servizi</a>
+    <a href="#prenota">Prenota</a>
+    <a href="#contatti">Contatti</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h2>Benvenuti nel mio studio</h2>
+  <p>Mi chiamo Mara De Rose, biologa nutrizionista. Ti aiuto a raggiungere il tuo benessere con un percorso personalizzato, sia in studio che online.</p>
+  <a class="btn" href="#prenota">Prenota una visita</a>
+</section>
+
+<section class="container" id="servizi">
+  <h2>Servizi</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Prima visita</h3>
+      <p>Valutazione completa dello stato nutrizionale e impostazione del piano personalizzato.</p>
+    </div>
+    <div class="card">
+      <h3>Visite di controllo</h3>
+      <p>Monitoraggio dei progressi e aggiornamento del piano alimentare.</p>
+    </div>
+    <div class="card">
+      <h3>Consulenza online</h3>
+      <p>Supporto a distanza via videochiamata, per chi è fuori città o preferisce la comodità di casa.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="prenota">
+  <h2>Prenota una visita</h2>
+  <p>Seleziona il tipo di visita e scegli una data direttamente nel calendario.</p>
+
+  <!-- Calendly Widget BEGIN -->
+  <div class="calendly-inline-widget" data-url="https://calendly.com/tuo-link-calendly" style="min-width:320px;height:630px;"></div>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <!-- Calendly Widget END -->
+</section>
+
+<section class="container" id="contatti">
+  <h2>Contatti</h2>
+  <p>Email: <strong>mara.derose@email.it</strong></p>
+  <p>Telefono: <strong>+39 123 456 7890</strong></p>
+  <p>Studio: <strong>Via Peppino Impastato, Montalto Uffugo (CS)</strong></p>
+</section>
+
+<footer>
+  © 2026 Biologa Nutrizionista Mara De Rose
+</footer>
+
+</body>
 </html>
