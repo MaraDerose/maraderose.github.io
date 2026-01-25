@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mara De Rose Biologa - Nutrizionista</title>
+  <title>Mara De Rose – Biologa Nutrizionista</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -24,43 +24,55 @@
       line-height: 1.6;
     }
 
+    /* ---------------- HEADER ---------------- */
+
     header{
       background: var(--petrolio);
       color: var(--bianco);
-      padding: 10px 30px;
+      padding: 15px 30px;
       display:flex;
       justify-content: space-between;
       align-items:center;
+      flex-wrap: wrap;
     }
 
     header h1{
       margin:0;
-      font-size: 24px;
+      font-size: 22px;
+    }
+
+    nav{
+      display:flex;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     nav a{
       color: var(--bianco);
-      margin-left: 20px;
       text-decoration:none;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 16px;
     }
 
-    /* ---------------- HERO A DUE COLONNE ---------------- */
+    /* ---------------- HERO ---------------- */
 
     .hero{
       background: linear-gradient(120deg, rgba(11,107,107,0.9), rgba(11,107,107,0.6)),
                   url('https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1600&q=80');
       background-size: cover;
+      background-position: center;
       color: white;
-      padding: 20px 40px;
+      padding: 40px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      gap: 40px;
+      flex-wrap: wrap;
     }
 
     .hero-content{
       max-width: 600px;
+      flex: 1;
     }
 
     .hero h2{
@@ -69,8 +81,7 @@
     }
 
     .hero p{
-      font-size: 22px;
-      line-height: 1.5;
+      font-size: 20px;
       margin: 0 0 25px 0;
     }
 
@@ -83,24 +94,23 @@
       cursor:pointer;
       font-weight:bold;
       text-decoration:none;
+      text-align:center;
+      display:block;
     }
 
-    /* ---------------- FOTO OVALE ---------------- */
-
     .hero-photo{
-      width: 200px;
-      height: 260px;
+      width: 220px;
+      height: 280px;
       object-fit: cover;
       border-radius: 50% / 60%;
-      border: 3px solid var(--petrolio);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-      display: block;
+      border: 3px solid var(--bianco);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     }
 
     /* ---------------- SEZIONI ---------------- */
 
     .container{
-      padding: 40px;
+      padding: 40px 30px;
       max-width: 1100px;
       margin: auto;
     }
@@ -128,18 +138,12 @@
       color:white;
       text-align:center;
       padding: 20px;
+      margin-top: 40px;
     }
 
     /* ---------------- RESPONSIVE ---------------- */
 
     @media (max-width: 900px){
-      header{
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav{
-        margin-top: 10px;
-      }
       .grid{
         grid-template-columns: 1fr;
       }
@@ -147,16 +151,20 @@
 
     @media (max-width: 600px){
 
+      header{
+        text-align:center;
+        justify-content:center;
+      }
+
+      nav{
+        justify-content:center;
+        gap: 12px;
+      }
+
       .hero{
         flex-direction: column;
         text-align: center;
         padding: 30px 20px;
-      }
-
-      .hero-photo{
-        width: 130px;
-        height: 170px;
-        margin: 10px auto;
       }
 
       .hero h2{
@@ -164,7 +172,25 @@
       }
 
       .hero p{
-        font-size: 18px;
+        font-size: 17px;
+      }
+
+      .hero-photo{
+        width: 150px;
+        height: 190px;
+      }
+
+      .btn{
+        padding: 10px 16px;
+        font-size: 15px;
+      }
+
+      .container{
+        padding: 30px 20px;
+      }
+
+      .card{
+        padding: 18px;
       }
     }
 
@@ -183,30 +209,23 @@
   </nav>
 </header>
 
-
-<!-- ---------------- HERO COMPLETA ---------------- -->
+<!-- ---------------- HERO ---------------- -->
 
 <section class="hero" id="home">
 
   <div class="hero-content">
-  <h2>Benvenuti nel mio studio</h2>
-  <p>Mi chiamo Mara De Rose, biologa nutrizionista. Ti aiuto a raggiungere il tuo benessere con un percorso personalizzato, sia in studio che online.</p>
-  <div style="display: flex; flex-direction: column; gap: 15px; max-width: 300px;">
-    <a class="btn" 
-       href="https://calendly.com/maraderose-biologanutrizionista/30min" 
-       target="_blank"
-       style="text-align:center;">
-       Prenota Prima Visita
-    </a>
-    <a class="btn" 
-       href="https://calendly.com/maraderose-biologanutrizionista/visita-di-controllo" 
-       target="_blank"
-       style="text-align:center;">
-       Prenota Visita di Controllo
-    </a>
-  </div>
-</div>
+    <h2>Benvenuti nel mio studio</h2>
+    <p>Mi chiamo Mara De Rose, biologa nutrizionista. Ti aiuto a raggiungere il tuo benessere con un percorso personalizzato, sia in studio che online.</p>
 
+    <div style="display: flex; flex-direction: column; gap: 15px; max-width: 300px; margin:auto;">
+      <a class="btn" href="https://calendly.com/maraderose-biologanutrizionista/30min" target="_blank">
+        Prenota Prima Visita
+      </a>
+      <a class="btn" href="https://calendly.com/maraderose-biologanutrizionista/visita-di-controllo" target="_blank">
+        Prenota Visita di Controllo
+      </a>
+    </div>
+  </div>
 
   <img src="attachments/logo.jpeg"
        alt="Dott.ssa Mara De Rose - Biologa Nutrizionista"
@@ -232,10 +251,6 @@
       <p>Supporto a distanza via videochiamata, per chi è fuori città o preferisce la comodità di casa.</p>
     </div>
   </div>
-</section>
-
-
-</div>
 </section>
 
 <!-- ---------------- CONTATTI ---------------- -->
