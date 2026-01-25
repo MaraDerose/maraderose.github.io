@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mara De Rose Biologa - Nutrizionista</title>
@@ -17,9 +18,10 @@
 
     body{
       margin:0;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       color: var(--nero);
       background: var(--grigio);
+      line-height: 1.6;
     }
 
     header{
@@ -114,6 +116,7 @@
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: justify;
     }
 
     .card h3{
@@ -175,20 +178,35 @@
   <nav>
     <a href="#home">Home</a>
     <a href="#servizi">Servizi</a>
-    <a href="#prenota">Prenota</a>
+    <a href="https://www.instagram.com/nutrizionista_mara_de_rose/" target="_blank">Consigli</a>
     <a href="#contatti">Contatti</a>
   </nav>
 </header>
+
 
 <!-- ---------------- HERO COMPLETA ---------------- -->
 
 <section class="hero" id="home">
 
   <div class="hero-content">
-    <h2>Benvenuti nel mio studio</h2>
-    <p>Mi chiamo Mara De Rose, biologa nutrizionista. Ti aiuto a raggiungere il tuo benessere con un percorso personalizzato, sia in studio che online.</p>
-    <a class="btn" href="#prenota">Prenota una visita</a>
+  <h2>Benvenuti nel mio studio</h2>
+  <p>Mi chiamo Mara De Rose, biologa nutrizionista. Ti aiuto a raggiungere il tuo benessere con un percorso personalizzato, sia in studio che online.</p>
+  <div style="display: flex; flex-direction: column; gap: 15px; max-width: 300px;">
+    <a class="btn" 
+       href="https://calendly.com/maraderose-biologanutrizionista/30min" 
+       target="_blank"
+       style="text-align:center;">
+       Prenota Prima Visita
+    </a>
+    <a class="btn" 
+       href="https://calendly.com/maraderose-biologanutrizionista/visita-di-controllo" 
+       target="_blank"
+       style="text-align:center;">
+       Prenota Visita di Controllo
+    </a>
   </div>
+</div>
+
 
   <img src="attachments/logo.jpeg"
        alt="Dott.ssa Mara De Rose - Biologa Nutrizionista"
@@ -216,22 +234,16 @@
   </div>
 </section>
 
-<!-- ---------------- PRENOTA ---------------- -->
 
-<section class="container" id="prenota">
-  <h2>Prenota una visita</h2>
-  <p>Seleziona il tipo di visita e scegli una data direttamente nel calendario.</p>
-
-  <div class="calendly-inline-widget" data-url="https://calendly.com/tuo-link-calendly" style="min-width:320px;height:630px;"></div>
-  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</div>
 </section>
 
 <!-- ---------------- CONTATTI ---------------- -->
 
 <section class="container" id="contatti">
   <h2>Contatti</h2>
-  <p>Email: <strong>mara.derose@email.it</strong></p>
-  <p>Telefono: <strong>+39 123 456 7890</strong></p>
+  <p>Email: <strong>maraderose.biologanutrizionista@gmail.com</strong></p>
+  <p>Telefono: <strong>+39 351 851 4500</strong></p>
   <p>Studio: <strong>Via Peppino Impastato, Montalto Uffugo (CS)</strong></p>
 </section>
 
